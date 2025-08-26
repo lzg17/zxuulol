@@ -121,51 +121,51 @@
         }
     </style>
 </head>
-<body>
-    <div class="entrance-modal" id="entranceModal">
-        <div class="modal-content">
-            <h2>yo im zxuu</h2>
-            <div class="button-container">
-                <button class="enter-button" onclick="enter(true)">
-                    with music
-                </button>
-                <button class="enter-button" onclick="enter(false)">
-                    without music
-                </button>
+    <body>
+        <div class="entrance-modal" id="entranceModal">
+            <div class="modal-content">
+                <h2>yo im zxuu</h2>
+                <div class="button-container">
+                    <button class="enter-button" onclick="enter(true)">
+                        with music
+                    </button>
+                    <button class="enter-button" onclick="enter(false)">
+                        without music
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="main-content" id="mainContent">
-        <h1>there is nothing here at the moment</h1>
-        <h1 class="second-line">maybe i'll add something in the future</h1>
-        <a href="https://osu.ppy.sh/users/2528257" class="click-me" target="_blank">click me!</a>
-    </div>
-
-    <audio id="backgroundMusic" loop>
-        <source src="https://zxuu.s-ul.eu/IcBD8X7W" type="audio/mpeg">
-    </audio>
-
-    <script>
-        function enter(withMusic) {
-            const modal = document.getElementById('entranceModal');
-            const mainContent = document.getElementById('mainContent');
-            const music = document.getElementById('backgroundMusic');
-
-            modal.style.display = 'none';
-            mainContent.classList.add('visible');
-
-            if (withMusic) {
-                try {
-                    music.volume = 0.3;
-                    music.play().catch(function(error) {
-                        console.log("Music playback failed:", error);
-                    });
-                } catch (e) {
-                    console.log("Music playback error:", e);
+    
+        <div class="main-content" id="mainContent">
+            <h1>there is nothing here at the moment</h1>
+            <h1 class="second-line">maybe i'll add something in the future</h1>
+            <a href="https://osu.ppy.sh/users/2528257" class="click-me" target="_blank">click me!</a>
+        </div>
+    
+        <audio id="backgroundMusic" loop>
+            <source src="https://zxuu.s-ul.eu/IcBD8X7W" type="audio/mpeg">
+        </audio>
+    
+        <script>
+            function enter(withMusic) {
+                const modal = document.getElementById('entranceModal');
+                const mainContent = document.getElementById('mainContent');
+                const music = document.getElementById('backgroundMusic');
+    
+                modal.style.display = 'none';
+                mainContent.classList.add('visible');
+    
+                if (withMusic) {
+                    try {
+                        music.volume = 0.3;
+                        music.play().catch(function(error) {
+                            console.log("Music playback failed:", error);
+                        });
+                    } catch (e) {
+                        console.log("Music playback error:", e);
+                    }
                 }
             }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
